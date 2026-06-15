@@ -9,7 +9,7 @@ body{
 }
 /* navbar */
 .navbar{
-    height: 5rem;
+    min-height: 5rem;
     background-color: white
 }
 .ri-compass-3-line{
@@ -72,6 +72,7 @@ body{
 .add-btn{
     background-color: #fe424d !important;
     border: none !important;
+    margin-bottom: 15px;
 }
 
 /* Edit Page */
