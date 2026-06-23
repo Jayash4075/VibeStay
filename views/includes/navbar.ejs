@@ -1,27 +1,73 @@
+<style>
+  .btn-outline-search{
+    background-color: #fe424d;
+    color: #303030;
+    border-radius: 25px;
+    padding: 0 14px;
+  }
+  .btn-outline-search:hover{
+    background-color: #fe424d;
+    color: #fff;
+  }
+  .btn-outline-search i{
+    display: inline;
+    margin-right: 0.5rem;
+  }
+  .search-inp{
+    width: 100%;
+    border-radius: 25px;
+    padding: 0.5rem 4rem;
+    font-size: 0.9rem;
+  }
+  @media (max-width: 768px) {
+  .search-inp {
+    width: 250px; /* fixed width on desktop */
+  }
+  .nav-link{
+    font-size: 14px;
+    font-weight: 600;
+  }
+  
+  .search-feature{
+    display: none;
+  }
+
+}
+</style>
+
 <nav class="navbar navbar-expand-md bg-body-light border-bottom sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/"><i class="ri-compass-3-line"></i></a>
+    <a class="navbar-brand" href="/listings"><i class="ri-compass-3-line"></i></a>
     <button class="navbar-toggler"
-     type="button" 
-     data-bs-toggle="collapse" 
-     data-bs-target="#navbarNavAltMarkup">
-      <span class="navbar-toggler-icon"></span>
+      type="button" 
+      data-bs-toggle="collapse" 
+      data-bs-target="#navbarNavAltMarkup">
+        <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
       <div class="navbar-nav">
-        <a class="nav-link " aria-current="page" href="/">Home</a>
-        <a class="nav-link" href="/listings">All Listings</a>
-        <a class="nav-link" href="/listings/new">Add new listing</a>
+        <a class="nav-link link-secondary explore" href="/listings">All Listings</a>
       </div>
+
+      <div class="navbar-nav ms-auto search-feature">
+        <form class="d-flex gap-md-3" role="search">
+          <input class="form-control me-2 search-inp" type="search" placeholder="Search destinations" aria-label="Search">
+          <button class="btn btn-outline-search" type="submit"><i class="ri-search-line"></i>Search</button>
+        </form>
+      </div>
+  
+      
       <div class="navbar-nav ms-auto">
+        <a class="nav-link link-success" href="/listings/new"><i class="ri-add-line"></i>Airbnb your home</a>
         <% if(!currUser) { %>
-            <a class="nav-link " aria-current="page" href="/signup">Sign up</a>
-            <a class="nav-link" href="/login">Login</a>
+          <a class="nav-link  link-dark" aria-current="page" href="/signup"><b>Sign up</b></a>
+            <a class="nav-link link-dark" href="/login"><b>Login</b></a>
         <% } %>
         <% if (currUser) { %>
-          <a class="nav-link" href="/logout">Logout</a>
+          <a class="nav-link link-dark" href="/logout"><b>Logout</b></a>
         <% } %>
       </div>
+
     </div>
   </div>
 </nav>
