@@ -13,8 +13,10 @@ VibeStay is a full-stack web application where users can explore, add, and revie
 ## ✨ Features
 
 - 🔐 **User Authentication** — Register and log in to manage your listings
+- 🔑 **User Authorization** - Listings owner only can edit and delete their listings
 - 🏠 **Create Listings** — Add places with title, description, location, price, and images
 - 📷 **Image Uploads** — Images stored securely via Cloudinary
+- ☑️ **Validation** - Implemented Server side validation for ensuring malformed data cannot compromise the application's database, even if frontend checks are completely bypassed
 - ⭐ **Reviews** — Logged-in users can post reviews on any listing
 - ✏️ **Edit & Delete** — Full CRUD support for listings and reviews (owner-only)
 - 📱 **Responsive UI** — Clean views rendered with EJS templating
@@ -61,7 +63,7 @@ VibeStay/
 
 ---
 
-## ⚙️ Getting Started
+## ⚙️ Getting Started 
 
 ### Prerequisites
 
