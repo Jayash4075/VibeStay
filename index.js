@@ -2,8 +2,6 @@ if (process.env.NODE_ENV != "production"){
     require('dotenv').config({quiet:true});
 }
 
-
-
 const express = require("express");
 const app = express();
 const mongoose = require("mongoose");
@@ -71,8 +69,6 @@ const sessionOptions = {
 //     res.send("root is working");
 // })
 
-
-
 app.use(session(sessionOptions));
 app.use(flash());
 
@@ -89,17 +85,6 @@ app.use((req,res,next)=>{
     res.locals.currUser = req.user;
     next();
 })
-
-//Demo user
-// app.get("/demoUser", async (req,res)=>{
-//     let fakeuser = new User({
-//         email: "student@gmail.com",
-//         username: "delta-student",
-// })
-
-//     let registeredUser = await User.register(fakeuser, "helloWorld!");
-//     res.send(registeredUser);
-// });
 
 app.use("/listings" , listingRouter);
 app.use("/listings/:id/reviews" , reviewRouter);
