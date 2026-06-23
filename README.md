@@ -1,12 +1,6 @@
-# VibeStay 🏡
+# VibeStay
 
 **Discover and share unique places to stay — a community-driven travel listing platform.**
-
----
-
-## 🌐 Live Demo
-
-[VibeStay on Render](https://vibestay-app.onrender.com)
 
 ---
 
@@ -59,6 +53,11 @@ VibeStay/
 ├── schema.js            # Joi validation schemas
 └── package.json
 ```
+
+## 🌐 Live Demo
+
+[VibeStay on Render](https://vibestay-app.onrender.com)
+> ⏳ **Note on Loading Time:** This application is hosted on Render's free tier. If the app has been inactive for a while, it may take **50–60 seconds** to "wake up" and load. Please give it a minute—it will load shortly!
 
 ---
 
@@ -117,6 +116,7 @@ To deploy your own instance:
 2. Create a new Web Service on [Render](https://render.com)
 3. Add all environment variables in the Render dashboard
 4. Set the build command to `npm install` and start command to `node index.js`
+5. Add the IP address from Render to MongoDB Atlas
 
 ---
 
